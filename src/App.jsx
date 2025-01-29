@@ -53,7 +53,7 @@ const App = () => {
         setShowPublicKeyInvalidMessage(true);
       }
     });
-
+    //commit
     // we only want this to fire on mount
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -78,17 +78,9 @@ const App = () => {
       }}
     >
       {!connected ? (
-        <Button
-          label="Call Vapi’s Pizza Front Desk"
-          onClick={startCallInline}
-          isLoading={connecting}
-        />
+        <Button label="Call Vapi’s Pizza Front Desk" onClick={startCallInline} isLoading={connecting} />
       ) : (
-        <ActiveCallDetail
-          assistantIsSpeaking={assistantIsSpeaking}
-          volumeLevel={volumeLevel}
-          onEndCallClick={endCall}
-        />
+        <ActiveCallDetail assistantIsSpeaking={assistantIsSpeaking} volumeLevel={volumeLevel} onEndCallClick={endCall} />
       )}
 
       {showPublicKeyInvalidMessage ? <PleaseSetYourPublicKeyMessage /> : null}
