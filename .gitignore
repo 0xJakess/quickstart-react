@@ -2,10 +2,10 @@
 /node_modules
 /.pnp
 .pnp.js
-
+.env
 # testing
 /coverage
-
+/.yarn
 # production
 /build
 
