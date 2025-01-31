@@ -4,12 +4,15 @@ import ActiveCallDetail from "./components/ActiveCallDetail";
 import Button from "./components/base/Button";
 import Vapi from "@vapi-ai/web";
 import { isPublicKeyMissingError } from "./utils";
+require("dotenv").config();
 
 // Put your Vapi Public Key below.
 const vapi = new Vapi(process.env.VAPI_PUBLIC_KEY);
 const assistantId = process.env.ASSISTANT_ID;
 
 const App = () => {
+  console.log(process.env.VAPI_PUBLIC_KEY);
+  console.log(process.env.ASSISTANT_ID);
   const [connecting, setConnecting] = useState(false);
   const [connected, setConnected] = useState(false);
 
